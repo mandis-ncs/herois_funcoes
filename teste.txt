@@ -1,0 +1,35 @@
+    <div id="titulo"></div>
+    <ul>
+        <li class="alternativa"></li>
+        <li class="alternativa"></li>
+        <li class="alternativa"></li>
+        <li class="alternativa"></li>
+    </ul>
+
+    <script src="js/quizz.js"></script>
+
+    js-----
+
+let pergunta = {
+    titulo: 'batman',
+    alternativas: ['Batman', 'Superman', 'Mulher Gato', 'Coringa'],
+    correta: 0
+};
+// let variavel = selecionando variavel
+//atribuindo titulo e alternativas a variavel pergunta
+// array é [] e ordem de elementos é [0,1,2,3,...]
+
+function mostrarquestao(q){
+    let titleDiv = document.getElementById('titulo');
+    titleDiv.textContent = q.titulo;
+    //atribuindo conteudo das alternativas do array perguntas na tag html titulo
+
+    let alts = document.querySelectorAll('.alternativa');
+    alts.forEach(function(element,index){
+    element.textContent = q.alternativas[index];
+    })
+}
+
+mostrarquestao(pergunta);    
+
+

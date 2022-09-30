@@ -1,0 +1,101 @@
+:root {
+    --cinza: #aaa;
+    --vermelha: #e93d50;
+    --vermelha-escura: #af303f;
+    --branca: #fff;
+    --luz: rgb(229, 255, 0);
+  }
+  
+
+body {
+    align-items: center;
+    background-image: url(../imgs/space.jpg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    color: var(--branca);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-shadow: #000 10px solid;
+  }
+
+  h5 {
+    color: var(--branca);
+  }
+  
+  .menu {
+    background: linear-gradient(to bottom, rgb(155, 0, 59) 0%, #340f70 33%,#06005e 100%);
+    box-shadow: 6px 8px 0 6px rgb(0, 0, 0), 10px 10px 0px #000;
+    border-radius: 30px;
+    display: grid;
+    gap: 10px; /*entre grids*/
+    grid-template-columns: repeat(2, auto);
+    padding: 10px; /*entre grid e border*/
+  }
+
+  .tecla {
+    border-radius: 30px;
+    box-shadow: 3px 3px 0 var(--cinza);
+    color: var(--vermelha);
+    cursor: pointer;
+    height: 120px;
+    font-size: 1.75em;
+    font-weight: bold;
+    line-height: 120px;
+    text-align: center;
+    width: 120px;
+  }
+  
+  .superman {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../imgs/superman.jpg");
+    z-index: 1;
+  }
+
+  .batman {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../imgs/batman.jfif");
+    z-index: 1;
+  }
+
+  .coringa {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../imgs/joker.jpg");
+    z-index: 1;
+  }
+
+  .groot {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../imgs/eu-sou-groot-online-gratis.webp");
+    z-index: 1;
+  }
+
+  .tecla.ativa,
+  .tecla:active {
+    background-color: var(--vermelha);
+    border: 4px solid  var(--vermelha);
+    box-shadow: 3px 3px 0 var(--vermelha-escura) inset;
+    color: var(--branca);
+    outline: none;
+  }
+  
+  .tecla.focus,
+  .tecla:focus {
+    outline: none;
+    box-shadow: 1px 1px 10px var(--luz);
+  }
+  
+  .tecla.active:focus,
+  .tecla:active:focus {
+    box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
+  }
+  
